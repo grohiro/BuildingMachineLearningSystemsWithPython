@@ -3,7 +3,6 @@ from sklearn.datasets import load_iris
 from matplotlib import pyplot as plt
 
 data = load_iris()
-print(data)
 features = data['data']
 feature_names = data['feature_names']
 target = data['target']
@@ -16,7 +15,8 @@ for i, (p0, p1) in enumerate(pairs):
     plt.subplot(2, 3, i + 1)
     # 品種ごとにプロットする
     for t, marker, c in zip(range(3), ">ox", "rgb"):
-        plt.scatter(features[target == t, p0], features[target == t, p1], marker=marker, c=c)
+        plt.scatter(features[target == t, p0], features[
+            target == t, p1], marker=marker, c=c)
         plt.xlabel(feature_names[p0])
         plt.ylabel(feature_names[p1])
         plt.xticks([])
