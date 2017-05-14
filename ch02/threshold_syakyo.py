@@ -1,4 +1,3 @@
-
 import numpy as np
 
 def learn_model(features, labels):
